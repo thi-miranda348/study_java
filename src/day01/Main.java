@@ -1,20 +1,42 @@
 package day01;
+// The user (Store Manager) needs to input product details manually, and the system should display a summary report with calculated values.
+import java.util.Scanner;
+
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello World");
+        // Initialize Scanner
+        Scanner input = new Scanner(System.in);
 
-        // Concatenation example
-        String productName = "iPhone 16 Pro";
-        int quantity = 1;
-        double price = 599.99;
+        // Input String
+        System.out.print("Enter Product Name: ");
+        String productName = input.nextLine();
 
-        System.out.println("Product: " + productName + " | Stock: " + quantity + " | Price: $" + price);
 
-        // Formatting Floating Point Numbers
-        double oneNumber = 9982345675.88;
+        // Input Double
+        System.out.print("Enter Buying Price: ");
+        double buyingPrice = input.nextDouble();
 
-        // %.2f: number should be formatted as a (f) floating number with (2) digits to right of decimal point
-        String formattedNumber = String.format("%.2f", oneNumber);
-        System.out.println("Formatted Number: " + formattedNumber); // 9982345675.88
+        // Input Int
+        System.out.print("Enter Quantity: ");
+        int quantity = input.nextInt();
+
+
+        // Calculations
+        double totalValue = buyingPrice * quantity;
+        // Explicit Casting - cast the result of the multiplication to (int) to chop off decimals
+        int promoPrice = (int) (buyingPrice * 0.5);
+
+
+        // Output
+        System.out.println("... PROCESSING ...");
+        System.out.println("--- PRODUCT REPORT ---");
+        System.out.println("Item Name: " +  productName );
+        System.out.println("Total Stock Value: $" + totalValue );
+        System.out.println("Clearance Price (Int): $" + promoPrice);
+
+
+        // Close the correct variable name "input"
+        input.close();
     }
 }
