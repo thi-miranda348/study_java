@@ -1,6 +1,7 @@
 package com.hotelapp.ui;
 
 import com.hotelapp.service.HotelService;
+
 import java.util.Scanner;
 
 public class Main {
