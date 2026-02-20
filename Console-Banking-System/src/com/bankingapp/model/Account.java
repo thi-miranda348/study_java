@@ -1,8 +1,8 @@
 package com.bankingapp.model;
 
 public abstract class Account {
-    private String accountNumber;
-    private String pin;
+    private final String accountNumber;
+    private final String pin;
     protected double balance;
 
     public Account(String accountNumber, String pin, double initialBalance) {
