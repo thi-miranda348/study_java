@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class AccountRepository {
-    private Map<String, Account> database;
+    private final Map<String, Account> database;
 
     public AccountRepository() {
         database = new HashMap<>();

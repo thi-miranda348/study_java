@@ -1,5 +1,7 @@
 package com.bankingapp.model;
 
+import com.bankingapp.exception.BankingException;
+
 public abstract class Account {
     private final String accountNumber;
     private final String pin;
@@ -31,5 +33,5 @@ public abstract class Account {
     }
 
 
-    public abstract void withdraw(double amount) throws Exception;
+    public abstract void withdraw(double amount) throws BankingException;
 }
